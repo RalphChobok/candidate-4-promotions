@@ -1,0 +1,77 @@
+{
+  "_note": "Representative sandbox data for the Trestle Platform API v2. Stub the API however you like; these are the shapes and values it returns.",
+
+  "venues": [
+    { "venue_id": "VEN-0233", "name": "The Brass Anchor", "state": "SA", "timezone": null, "trading_hours": { "mon": ["11:00", "23:00"], "tue": ["11:00", "23:00"], "wed": ["11:00", "23:00"], "thu": ["11:00", "00:30"], "fri": ["11:00", "01:00"], "sat": ["11:00", "01:00"], "sun": ["11:00", "22:00"] } },
+    { "venue_id": "VEN-0418", "name": "Kestrel & Vine", "state": "SA", "timezone": null, "trading_hours": { "mon": ["16:00", "23:00"], "tue": ["16:00", "23:00"], "wed": ["16:00", "23:00"], "thu": ["16:00", "00:00"], "fri": ["12:00", "01:00"], "sat": ["12:00", "01:00"], "sun": ["12:00", "22:00"] } },
+    { "venue_id": "VEN-0907", "name": "The Gilded Spoon", "state": "SA", "timezone": null, "trading_hours": { "mon": ["11:30", "22:00"], "tue": ["11:30", "22:00"], "wed": ["11:30", "22:00"], "thu": ["11:30", "23:00"], "fri": ["11:30", "23:30"], "sat": ["11:30", "23:30"], "sun": ["11:30", "21:00"] } },
+    { "venue_id": "VEN-1044", "name": "Harbourlane Tavern", "state": "SA", "timezone": null, "trading_hours": { "mon": ["11:00", "23:00"], "tue": ["11:00", "23:00"], "wed": ["11:00", "23:00"], "thu": ["11:00", "00:00"], "fri": ["11:00", "01:00"], "sat": ["11:00", "01:00"], "sun": ["11:00", "22:00"] } },
+    { "venue_id": "VEN-1160", "name": "The Sable Arms", "state": "VIC", "timezone": null, "trading_hours": { "mon": ["12:00", "23:00"], "tue": ["12:00", "23:00"], "wed": ["12:00", "23:00"], "thu": ["12:00", "00:00"], "fri": ["12:00", "01:00"], "sat": ["12:00", "01:00"], "sun": ["12:00", "22:00"] } },
+    { "venue_id": "VEN-1207", "name": "Fitzroy Larder", "state": "VIC", "timezone": null, "trading_hours": { "mon": ["11:00", "22:00"], "tue": ["11:00", "22:00"], "wed": ["11:00", "22:00"], "thu": ["11:00", "23:00"], "fri": ["11:00", "23:30"], "sat": ["11:00", "23:30"], "sun": ["11:00", "21:00"] } }
+  ],
+
+  "products": [
+    { "product_id": "PRD-0101", "name": "Lager — pint", "category": "beverage", "price_cents": 1200, "tax_code": "GST" },
+    { "product_id": "PRD-0102", "name": "Pale Ale — pint", "category": "beverage", "price_cents": 1300, "tax_code": "GST" },
+    { "product_id": "PRD-0103", "name": "House Red — glass", "category": "beverage", "price_cents": 1100, "tax_code": "GST" },
+    { "product_id": "PRD-0104", "name": "House White — glass", "category": "beverage", "price_cents": 1100, "tax_code": "GST" },
+    { "product_id": "PRD-0105", "name": "Premix Can — bourbon", "category": "beverage", "price_cents": 1400, "tax_code": "GST" },
+    { "product_id": "PRD-0106", "name": "Premix Can — vodka soda", "category": "beverage", "price_cents": 1400, "tax_code": "GST" },
+    { "product_id": "PRD-0107", "name": "Water — bottled", "category": "beverage", "price_cents": 400, "tax_code": "GST" },
+    { "product_id": "PRD-0108", "name": "Soft Drink", "category": "beverage", "price_cents": 500, "tax_code": "GST" },
+    { "product_id": "PRD-0201", "name": "Chicken Schnitzel", "category": "food", "price_cents": 2600, "tax_code": "GST" },
+    { "product_id": "PRD-0202", "name": "Parmigiana", "category": "food", "price_cents": 2900, "tax_code": "GST" },
+    { "product_id": "PRD-0203", "name": "Loaded Fries", "category": "food", "price_cents": 1400, "tax_code": "GST" },
+    { "product_id": "PRD-0204", "name": "Steak Sandwich", "category": "food", "price_cents": 2400, "tax_code": "GST" }
+  ],
+
+  "orders": [
+    { "order_id": "ORD-8801", "venue_id": "VEN-0233", "status": "closed", "staff_id": "STF-11", "channel": "till", "items": [ { "product_id": "PRD-0101", "quantity": 2, "line_cents": 2400 } ], "subtotal_cents": 2400, "created_at": "2026-09-19T18:42:11+09:30" },
+    { "order_id": "ORD-8802", "venue_id": "VEN-0233", "status": "closed", "staff_id": "STF-12", "channel": "till", "items": [ { "product_id": "PRD-0201", "quantity": 1, "line_cents": 2600 }, { "product_id": "PRD-0101", "quantity": 1, "line_cents": 1200 } ], "subtotal_cents": 3800, "created_at": "2026-09-19T19:05:02+09:30" },
+    { "order_id": "ORD-8803", "venue_id": "VEN-0418", "status": "open", "staff_id": "STF-21", "channel": "till", "items": [ { "product_id": "PRD-0105", "quantity": 4, "line_cents": 5600 } ], "subtotal_cents": 5600, "created_at": "2026-09-19T20:18:44+09:30" }
+  ],
+
+  "payments": [
+    { "payment_id": "PAY-5512", "order_id": "ORD-8801", "status": "approved", "amount_cents": 2400, "method": "card", "approved_at": "2026-09-19T18:42:40+09:30", "acquirer_reference": "ACQ-99120031" },
+    { "payment_id": "PAY-5513", "order_id": "ORD-8802", "status": "declined", "amount_cents": 3800, "method": "card", "approved_at": null, "acquirer_reference": null },
+    { "payment_id": "PAY-5514", "order_id": "ORD-8802", "status": "approved", "amount_cents": 3800, "method": "card", "approved_at": "2026-09-19T19:06:31+09:30", "acquirer_reference": "ACQ-99120044" },
+    { "payment_id": "PAY-5515", "order_id": "ORD-8803", "status": "unknown", "amount_cents": 5600, "method": "card", "approved_at": null, "acquirer_reference": "ACQ-99120051" }
+  ],
+
+  "sales": [
+    { "sale_id": "SAL-3301", "venue_id": "VEN-0233", "business_date": "2026-09-19", "order_id": "ORD-8801", "product_id": "PRD-0101", "quantity": 2, "gross_cents": 2400, "discount_cents": 0, "payment_method": "card", "staff_id": "STF-11", "voided": false, "voided_at": null },
+    { "sale_id": "SAL-3302", "venue_id": "VEN-0233", "business_date": "2026-09-19", "order_id": "ORD-8802", "product_id": "PRD-0201", "quantity": 1, "gross_cents": 2600, "discount_cents": 260, "payment_method": "card", "staff_id": "STF-12", "voided": false, "voided_at": null },
+    { "sale_id": "SAL-3303", "venue_id": "VEN-0233", "business_date": "2026-09-19", "order_id": "ORD-8802", "product_id": "PRD-0101", "quantity": 1, "gross_cents": 1200, "discount_cents": 0, "payment_method": "card", "staff_id": "STF-12", "voided": true, "voided_at": "2026-09-19T23:41:08+09:30" },
+    { "sale_id": "SAL-3304", "venue_id": "VEN-1160", "business_date": "2026-09-19", "order_id": "ORD-8810", "product_id": "PRD-0202", "quantity": 2, "gross_cents": 5800, "discount_cents": 0, "payment_method": "cash", "staff_id": "STF-51", "voided": false, "voided_at": null }
+  ],
+
+  "settlements": [
+    { "settlement_id": "SET-771", "venue_id": "VEN-0233", "settlement_date": "2026-09-18", "gross_cents": 418250, "fee_cents": 5030, "net_cents": 413220, "batch_reference": "BATCH-20260918-0233", "bank_credited_at": "2026-09-19T04:12:00+09:30" },
+    { "settlement_id": "SET-772", "venue_id": "VEN-0233", "settlement_date": "2026-09-19", "gross_cents": 502110, "fee_cents": 6025, "net_cents": 496085, "batch_reference": "BATCH-20260919-0233", "bank_credited_at": "2026-09-22T04:09:00+09:30" },
+    { "settlement_id": "SET-773", "venue_id": "VEN-0418", "settlement_date": "2026-09-19", "gross_cents": 288400, "fee_cents": 3460, "net_cents": 284940, "batch_reference": "BATCH-20260919-0418", "bank_credited_at": "2026-09-22T04:09:00+09:30" },
+    { "settlement_id": "SET-774", "venue_id": "VEN-1160", "settlement_date": "2026-09-19", "gross_cents": 331900, "fee_cents": 3982, "net_cents": 327918, "batch_reference": "BATCH-20260919-1160", "bank_credited_at": "2026-09-22T04:41:00+10:00" },
+    { "settlement_id": "SET-775", "venue_id": "VEN-0907", "settlement_date": "2026-09-19", "gross_cents": 197300, "fee_cents": 2368, "net_cents": 194932, "batch_reference": "BATCH-20260919-0907", "bank_credited_at": "2026-09-22T04:09:00+09:30" },
+    { "settlement_id": "SET-776", "venue_id": "VEN-1044", "settlement_date": "2026-09-19", "gross_cents": 415620, "fee_cents": 4987, "net_cents": 410633, "batch_reference": "BATCH-20260919-1044", "bank_credited_at": "2026-09-22T04:09:00+09:30" }
+  ],
+
+  "members": [
+    { "member_number": "M-004182", "name": "R. Castellano", "tier": "gold", "discount_pct": 10, "active": true },
+    { "member_number": "M-004183", "name": "P. Nakamura", "tier": "standard", "discount_pct": 10, "active": true },
+    { "member_number": "M-003920", "name": "T. Whelan", "tier": "standard", "discount_pct": 10, "active": false }
+  ],
+
+  "promotions": [
+    { "promotion_id": "PRM-21", "name": "Happy Hour", "type": "percent_off", "value": 15, "applies_to": { "category": "beverage" }, "starts_at": "16:00", "ends_at": "18:00", "days": ["mon", "tue", "wed", "thu", "fri"], "priority": 10, "stackable": false },
+    { "promotion_id": "PRM-22", "name": "Member Discount", "type": "percent_off", "value": 10, "applies_to": { "all": true }, "starts_at": "00:00", "ends_at": "23:59", "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"], "priority": 5, "stackable": true },
+    { "promotion_id": "PRM-23", "name": "Schnitzel Tuesday", "type": "fixed_price", "value": 1800, "applies_to": { "product_id": "PRD-0201" }, "starts_at": "11:00", "ends_at": "21:00", "days": ["tue"], "priority": 10, "stackable": false },
+    { "promotion_id": "PRM-24", "name": "Staff Discount", "type": "percent_off", "value": 30, "applies_to": { "all": true }, "starts_at": "00:00", "ends_at": "23:59", "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"], "priority": 20, "stackable": false },
+    { "promotion_id": "PRM-25", "name": "Parma & Pint for Two", "type": "bundle_price", "value": 5500, "applies_to": { "bundle": ["PRD-0202", "PRD-0202", "PRD-0101", "PRD-0101"] }, "starts_at": "17:00", "ends_at": "21:00", "days": ["thu"], "priority": 15, "stackable": false }
+  ],
+
+  "staff": [
+    { "staff_id": "STF-11", "name": "J. Okonjo", "role": "casual", "permissions": ["sell", "print_receipt"] },
+    { "staff_id": "STF-12", "name": "A. Petrakis", "role": "casual", "permissions": ["sell", "print_receipt", "void_line"] },
+    { "staff_id": "STF-21", "name": "M. Ferreira", "role": "supervisor", "permissions": ["sell", "print_receipt", "void_line", "override_price", "close_shift"] },
+    { "staff_id": "STF-51", "name": "D. Achebe", "role": "manager", "permissions": ["sell", "print_receipt", "void_line", "override_price", "close_shift", "view_reports"] }
+  ]
+}
